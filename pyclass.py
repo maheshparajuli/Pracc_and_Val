@@ -1,30 +1,21 @@
-class BankAccount:
-    def __init__(self, owner, balance=0):
-        self.owner = owner
-        self.balance = balance
+class Student:
+    clzname="kathmandu University"
 
-    def deposit(self, amount):
-        if amount > 0:
-            self.balance += amount
-            print(f"Deposited {amount}, New Balance: {self.balance}")
-        else:
-            print("Deposit must be positive!")
+    def __init__(self,name,registr_no,school_name,exam_roll,course_code):
+        self.name=name
+        self.registr_no=registr_no
+        self.school_name=school_name
+        self.exam_roll=exam_roll
+        self.course_code=course_code
 
-    def withdraw(self, amount):
-        if 0 < amount <= self.balance:
-            self.balance -= amount
-            print(f"Withdrew {amount}, New Balance: {self.balance}")
-        else:
-            print("Insufficient balance or invalid amount!")
 
-# Create accounts
-acc1 = BankAccount("Mahesh", 1000)
-acc2 = BankAccount("Sushan")
+    def printall(self):
+        print( self.name,
+        self.registr_no,
+        self.school_name,
+        self.exam_roll,
+        self.course_code,sep="\n")
+        
 
-# Using methods
-acc1.deposit(500)
-acc1.withdraw(300)
-
-# Checking account type
-print(isinstance(acc1, BankAccount))  # True
-print(isinstance(123, BankAccount))   # False
+m1=Student("Arjun Parajuli","0222233356780900098744-71","KUSOS","8066","MATH452")
+m1.printall()
