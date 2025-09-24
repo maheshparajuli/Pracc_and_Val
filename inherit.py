@@ -24,11 +24,17 @@ class Checkingac(Bankac):
     def withdraw(self,amount,fee=0):
         if amount<=self.limit:
             Bankac.withdraw(self,amount+fee)
-    
+        else:
+            # print("")
+            pass
 
 ac=Savingsac(300,0.3)
-print(ac.compute_interest(2))
+# print(ac.compute_interest(2))
 # print(ac.balance)
+bc=Checkingac(1000,500)
+bc.withdraw(400)
+print(bc.balance)
+
 
 
 
