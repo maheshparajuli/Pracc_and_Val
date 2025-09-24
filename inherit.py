@@ -6,9 +6,11 @@ class Bankac:
         self.balance-=amount
 
 class Savingsac(Bankac):
-    def printall(self):
-        print("whats going")
+    pass
 
-ac=Savingsac()
-isinstance(ac,Bankac)
+ac=Savingsac(200)
+
+print(isinstance(ac,Bankac))
+
+
         
