@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 # Define the URL of the webpage to scrape
-url = "https://www.example.com"  # Replace with your target URL
+url = "https://www.wikipedia.com"  # Replace with your target URL
 
 try:
     # Send an HTTP GET request to the URL

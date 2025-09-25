@@ -8,6 +8,14 @@ class Bankac:
     def __eq__(self, other):
         print("Bankac  __eq__ was called")
         return self.number==other.number
+    def __repr__(self):
+        return f"Bank Details({self.number},{self.balance})"
+    def __str__(self):
+        cus=f'''Customer:
+        Number: {self.number}
+        Balance:{self.balance}
+        '''
+        return cus
 
 
 class Savingsac(Bankac):
@@ -45,11 +53,13 @@ class Checkingac(Bankac):
 # bc.withdraw(400)
 # print(bc.balance)
 
-np=Bankac(300,123)
-ind=Savingsac(300,123,0.1)
-print(np==ind)  #python will always call child eq method
+# np=Bankac(300,123)
+# ind=Savingsac(300,123,0.1)
+# print(np==ind)  #python will always call child eq method
 
+o=Bankac(123,30000)
 
+print(o)
 
 
         
