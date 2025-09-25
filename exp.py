@@ -9,6 +9,23 @@ def list_of_ones(length):
         raise ValueError("invalid length.)
     return [1]*length
 
+There are classes and subclasses of exceptions.
+one hiearchy is BaseException/Exception/ArithmeticError/ZeroDivisonError
+
+Also, we can make custom exceptions by inheriting from built-in exception classes/subclasses.
+Look this example:
+
+
+class BalanceError(Exception):
+    pass
+
+class Customer:
+    def __init__(self,balance):
+        if balance<0:
+            raise BalanceError("balance has to be non-negative.")
+        else:
+            self.balance=balance
+
 '''
 
 try:

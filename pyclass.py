@@ -1,3 +1,15 @@
+"""
+Class: A blueprint/template used to build objects
+
+Object: A combination of data and functionality; An instance of a class
+
+State: Data associated with an object, assigned through attributes
+
+Behavior: An object's functionality, defined through methods 
+"""
+
+
+
 class Student:
     clzname="kathmandu University"
 
