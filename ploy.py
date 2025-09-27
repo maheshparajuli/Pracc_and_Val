@@ -35,5 +35,11 @@ lets demonstrate with example:
 class School:
     def name(self):
         print("Bright Angels' School, Thankot")
-class Student():
-    
+class Student(School):
+    def name(self):
+        print("Jalakman Gandharba")
+
+obj=School()
+obj.name()
+c=Student()
+c.name()
