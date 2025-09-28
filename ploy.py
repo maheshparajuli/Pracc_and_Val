@@ -32,6 +32,7 @@ methods can override parent class methods(same name wala)
 lets demonstrate with example:
 
 '''
+#simple code for my verification.
 class School:
     def name(self):
         print("Bright Angels' School, Thankot")
