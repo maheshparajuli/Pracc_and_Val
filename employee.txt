@@ -1,2 +1,8 @@
 John Smith
+22
 40000
+male 
+Arghakhanchi
+Nepal 
+Bsc.CM 
+
