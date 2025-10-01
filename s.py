@@ -1,3 +1,11 @@
+"""Remainder: module is single .py file, package is collection of modules.
+
+
+
+
+"""
+
+
 import datetime
 import time
 
