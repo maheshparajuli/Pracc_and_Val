@@ -1,4 +1,7 @@
 """Remainder: module is single .py file, package is collection of modules.
+Analogy:
+Euta book = MODULE
+Euta bookshelf = Package
 
 
 
@@ -21,10 +24,10 @@ def log_time(func):
         duration = (end - start).total_seconds()
         print(f"[END] {func.__name__} at {end.strftime('%Y-%m-%d %H:%M:%S')}")
         print(f"[DURATION] {func.__name__} took {duration:.2f} seconds\n")
-        return result
+        # return result
     return wrapper
 
-# Example functions using the decorator
+
 @log_time
 def slow_task():
     print("Running slow task...")
@@ -35,6 +38,6 @@ def fast_task():
     print("Running fast task...")
     time.sleep(0.5)
 
-# Run them
+
 slow_task()
 fast_task()
