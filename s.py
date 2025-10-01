@@ -6,13 +6,10 @@ Euta bookshelf = Package
 
 
 
-"""
-
-
 import datetime
 import time
 
-# Decorator to log execution time
+
 def log_time(func):
     def wrapper(*args, **kwargs):
         start = datetime.datetime.now()
@@ -41,3 +38,29 @@ def fast_task():
 
 slow_task()
 fast_task()
+"""
+
+class Parent:
+    def __init__(self):
+        self.parent_attribute = 'I am a parent'
+
+    def parent_method(self):
+        print('Back in my day...')
+
+
+
+class Child(Parent):
+    def __init__(self):
+        Parent.__init__(self)
+        self.child_attribute = 'I am a child'
+
+
+# Create instance of child
+child = Child()
+
+# Show attributes and methods of child class
+print(child.child_attribute)
+print(child.parent_attribute)
+child.parent_method()
+
+
