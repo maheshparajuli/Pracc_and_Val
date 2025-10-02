@@ -40,6 +40,7 @@ slow_task()
 fast_task()
 """
 
+"""
 class Parent:
     def __init__(self):
         self.parent_attribute = 'I am a parent'
@@ -55,12 +56,21 @@ class Child(Parent):
         self.child_attribute = 'I am a child'
 
 
-# Create instance of child
+
 child = Child()
 
-# Show attributes and methods of child class
+
 print(child.child_attribute)
 print(child.parent_attribute)
 child.parent_method()
+
+"""
+
+"""Lets try something.
+I will create problem by myself.
+Q. Create one form that takes input about username, account name and one can access account money after entering account name and username.
+ """
+
+
 
 
