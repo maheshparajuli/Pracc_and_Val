@@ -78,9 +78,20 @@ class Account:
         name=input("Enter username: ")
         acnumber=int(input("Enter account number: "))
 
-class Savings(Account):
+class Records(Account):
+    def acdetails(name,acnumber):
+        name="Mahesh"
+        acnumber=123
+
+class Savings(Account,Records):
     # cash=5000
-    # Account.__init__(self)
+    def __init__(self):
+        super().__init__()
+    # Account.__init__()
+    # Records.acdetails()
+    
+
+        
     
     def deposit(self,amount,name,acnumber):
 
