@@ -72,5 +72,39 @@ Q. Create one form that takes input about username, account name and one can acc
  """
 
 
+class Account:
+    def __init__(self):
+        cash=5000
+        name=input("Enter username: ")
+        acnumber=int(input("Enter account number: "))
+
+class Savings(Account):
+    # cash=5000
+    # Account.__init__(self)
+    
+    def deposit(self,amount,name,acnumber):
+
+        if name==name and acnumber==acnumber:
+            print("Name and Account number is correct")
+            cash+=amount
+        else:
+            print("Your have entered your details incorrectly.")
+    
+    def withdraw(self,amount,name,acnumber):
+        if name==name and acnumber==acnumber:
+            print("Name and Account number is correct")
+            cash-=amount
+        else:
+            print("Your have entered your details incorrectly.")
+
+o1=Savings()
+o1.deposit(10000,"mahesh",123)
+print(o1.cash)
+
+
+
+        
+
+
 
 
