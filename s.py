@@ -72,46 +72,14 @@ Q. Create one form that takes input about username, account name and one can acc
  """
 
 
-class Account:
+
+"""multiple inheritance: taking features from many classes, two or more than two.
+.get(key, default) is a dictionary method that tries to fetch the value for the given key.
+"""
+
+class Person:
     def __init__(self):
-        cash=5000
-        name=input("Enter username: ")
-        acnumber=int(input("Enter account number: "))
-
-class Records(Account):
-    def acdetails(name,acnumber):
-        name="Mahesh"
-        acnumber=123
-
-class Savings(Account,Records):
-    # cash=5000
-    def __init__(self):
-        super().__init__()
-    # Account.__init__()
-    # Records.acdetails()
-    
-
         
-    
-    def deposit(self,amount,name,acnumber):
-
-        if name==name and acnumber==acnumber:
-            print("Name and Account number is correct")
-            cash+=amount
-        else:
-            print("Your have entered your details incorrectly.")
-    
-    def withdraw(self,amount,name,acnumber):
-        if name==name and acnumber==acnumber:
-            print("Name and Account number is correct")
-            cash-=amount
-        else:
-            print("Your have entered your details incorrectly.")
-
-o1=Savings()
-o1.deposit(10000,"mahesh",123)
-print(o1.cash)
-
 
 
         
