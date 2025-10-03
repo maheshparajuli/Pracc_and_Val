@@ -66,10 +66,7 @@ child.parent_method()
 
 """
 
-"""Lets try something good.
-I will create problem by myself.
-Q. Create one form that takes input about username, account name and one can access account money after entering account name and username.
- """
+
 
 
 
@@ -78,8 +75,42 @@ Q. Create one form that takes input about username, account name and one can acc
 """
 
 class Person:
+    def __init__(self,name,phone_no):
+        self.name=name
+        self.phone_no=phone_no
+
+    def display_info(self):
+        return f"NAME:{self.name}\
+            PHONE NUMBER: {self.phone_no}"
+    
+class Customer(Person):
+    def __init__(self,name,phone_no,address):
+        super().__init__(name,phone_no)
+        self.address=address
+
+    def display_cust(self):
+        return f" {self.display_info()} \
+             ADDRESS: {self.address} "
+
+class Restaurant:
     def __init__(self):
-        
+        self.menu={
+            "veg momo":120,
+            "chicken momo": 180,
+            "Anda Fry":40,
+            "Chau Chau sadeko":50
+        }
+
+    def show_menu(self):
+        print("\n ****MENU****")
+        for item,price in self.menu.items():
+            print(f"{item}: RS. {price}")
+
+
+
+
+
+
 
 
         
