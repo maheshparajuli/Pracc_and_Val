@@ -95,8 +95,8 @@ class Customer(Person):
 class Restaurant:
     def __init__(self):
         self.menu={
-            "veg momo":120,
-            "chicken momo": 180,
+            "Veg momo":120,
+            "Chicken momo": 180,
             "Anda Fry":40,
             "Chau Chau sadeko":50
         }
@@ -112,7 +112,7 @@ class Restaurant:
 class Order(Customer,Restaurant):
     def __init__(self,name,phone_no,address):
         Customer.__init__(self,name,phone_no,address)
-        Restaurant.self(self)
+        Restaurant.__init__(self)
         self.cart=[]
 
     def add_item(self, item, quantity):
@@ -159,7 +159,7 @@ while True:
 
 
 order.show_cart()
-print("\nThank you for ordering! Your food will be delivered soon 🚚🍴")
+print("\nThank you for ordering! Your food will be delivered soon.")
 
 
 
