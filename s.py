@@ -106,6 +106,14 @@ class Restaurant:
         for item,price in self.menu.items():
             print(f"{item}: RS. {price}")
 
+        def get_price(self,item):
+            return self.menu.get(item,None)
+        
+class Order(Customer,Restaurant):
+    def __init__(self,name,phone_no,address):
+        Customer.__init__(self,name,phone_no,address)
+        Restaurant.self(self)
+        self.cart=[]
 
 
 
