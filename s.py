@@ -115,6 +115,53 @@ class Order(Customer,Restaurant):
         Restaurant.self(self)
         self.cart=[]
 
+    def add_item(self, item, quantity):
+        price = self.get_price(item)
+        if price:
+            self.cart.append((item, quantity, price * quantity))
+            print(f"Added {quantity} x {item} to cart.")
+        else:
+            print("Item not found in menu!")
+    
+    def show_cart(self):
+        print("\n--- Your Cart ---")
+        total = 0
+        for item, qty, cost in self.cart:
+            print(f"{item} ({qty}) - Rs {cost}")
+            total += cost
+        print(f"Total Bill: Rs {total}")
+        return total
+
+
+
+print("Welcome to Food Ordering System")
+
+
+name = input("Enter your name: ")
+phone = input("Enter your phone number: ")
+address = input("Enter your address: ")
+
+
+order = Order(name, phone, address)
+
+print("\nCustomer Details:")
+print(order.display_customer())
+
+
+order.show_menu()
+
+while True:
+    choice = input("\nEnter food item to add (or 'done' to finish): ").title()
+    if choice.lower() == "done":
+        break
+    qty = int(input(f"Enter quantity of {choice}: "))
+    order.add_item(choice, qty)
+
+
+order.show_cart()
+print("\nThank you for ordering! Your food will be delivered soon 🚚🍴")
+
+
 
 
 
